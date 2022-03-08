@@ -31,6 +31,8 @@
             <preference name="GradlePluginGoogleServicesVersion" value="4.3.10" />
         </config-file>
 
+		<hook type="before_compile" src="./hooks/before_build_MoveGoogleServices.js" />
+
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
 			<meta-data android:name="com.pushwoosh.log_level" android:value="$LOG_LEVEL" />
 			<meta-data android:name="com.pushwoosh.foreground_push" android:value="$ANDROID_FOREGROUND_PUSH" />
@@ -76,7 +78,7 @@
         <framework src="com.pushwoosh:pushwoosh-inbox-ui:6.4.1"/>
 		<framework src="com.pushwoosh:pushwoosh-huawei:6.4.1"/>
 
-		<hook type="before_prepare" src="./hooks/before_build_MoveGoogleServices.js" />
+		
 	</platform>
 
 	<!-- ios -->
