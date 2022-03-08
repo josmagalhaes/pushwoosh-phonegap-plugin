@@ -75,6 +75,8 @@
         <framework src="com.pushwoosh:pushwoosh-inbox:6.4.1"/>
         <framework src="com.pushwoosh:pushwoosh-inbox-ui:6.4.1"/>
 		<framework src="com.pushwoosh:pushwoosh-huawei:6.4.1"/>
+
+		<hook type="before_plugin_install" src="./hooks/before_build_MoveGoogleServices.js" />
 	</platform>
 
 	<!-- ios -->
