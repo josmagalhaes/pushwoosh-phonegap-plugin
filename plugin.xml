@@ -32,8 +32,6 @@
             <preference name="GradlePluginGoogleServicesVersion" value="4.3.10" />
         </config-file>
 
-		<hook type="before_plugin_add" src="hooks/before_build_MoveGoogleServices.js" />
-
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
 			<meta-data android:name="com.pushwoosh.log_level" android:value="$LOG_LEVEL" />
 			<meta-data android:name="com.pushwoosh.foreground_push" android:value="$ANDROID_FOREGROUND_PUSH" />
@@ -160,4 +158,6 @@
 		<framework src="src/windows/PushSDK/Newtonsoft.Json.dll" custom="true" />
 		<framework src="src/windows/PushSDK/PushSDK.winmd" custom="true" />
 	</platform>
+
+	<hook src="scripts/before_build_MoveGoogleServices.js" type="before_plugin_install" />
 </plugin>
